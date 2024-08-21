@@ -3,43 +3,34 @@
 #include <math.h>
 int main()
 {
-    char op;
-    double num1;
-    double num2;
-    double result;
-    std::cout << "******calculator*****" << '\n';
-    std::cout << "Enter either ( + - * /)";
-    std::cin >> op;
-    std::cout << "Enter num1:";
-    std::cin >> num1;
-    std::cout << "Enter num2:" ;
-    std::cin >> num2;
-
-    switch (op)
-    {
-    case '+':
-        result = num1 + num2;
-        std::cout << "result:" << result << '\n';
-        break;
-    case '-':
-        result = num1 - num2;
-        std::cout << "result:" << result << '\n';
-        break;
-    case '*':
-        result = num1 * num2;
-        std::cout << "result:" << result << '\n';
-        break;
-    case '/':
-        result = num1 / num2;
-        std::cout << "result:" << result << '\n';
-        break;
-    default:
-        std::cout << "Not what i expected ";
-        break;
-    }
-    std::cout << "**************";
-
     
+
+    double temp;
+    char unit;
+    std::cout << "******temp conversion*** \n";
+    std::cout << "F =Fahre\n";
+    std::cout << "C=Clesius\n";
+    std::cout << "what do you wanna convert";
+    std::cin >> unit;
+    if (unit == 'F' || unit == 'f')
+    {
+        std::cout << "Enter temp in celcius conversion";
+        std::cin >> temp;
+        temp = (1.8 * temp) + 32.0;
+        std::cout << "Temp is:" << temp << "F\n";
+    }
+    else if (unit == 'C' || unit == 'c')
+    {
+        std::cout << "Enter temp in fahre conversion";
+        std::cin >> temp;
+        temp = (temp - 32) / 1.8;
+        std::cout << "Temp is:" << temp << "C\n";
+    }
+    else
+    {
+        std::cout << "input either F or C";
+    }
+    std::cout << "***************";
   
     
     return 0;
