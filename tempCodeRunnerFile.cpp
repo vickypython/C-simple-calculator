@@ -1,1 +1,1 @@
-#include <ctime>
+return 0;
